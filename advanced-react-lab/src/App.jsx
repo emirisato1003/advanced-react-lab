@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from "./Button";
+import Avatar from './Avatar';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
 
       <h1>Avatars</h1>
       <div className="avatar-container">
-
+        <Avatar />
       </div>
     </main>
   );
