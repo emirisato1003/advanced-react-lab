@@ -34,8 +34,8 @@ The projects and exercises here are based on the curriculum and examples provide
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/advanced-react-practice.git
-   cd advanced-react-practice
+   git clone https://github.com/emirisato1003/advanced-react-lab.git
+   cd advanced-react-lab
    ```
 2. Install dependencies:
    ```bash
