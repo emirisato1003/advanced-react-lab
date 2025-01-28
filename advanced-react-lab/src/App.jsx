@@ -4,7 +4,7 @@ import Button from "./Button";
 function App() {
   return (
     <main>
-      <Button size="lg" className="green">Log in with Google</Button>
+      <Button variant="danger" size="lg" className="green">Log in with Google</Button>
     </main>
   );
 }

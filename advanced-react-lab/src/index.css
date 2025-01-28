@@ -43,3 +43,21 @@ button.button-lg {
 .green {
   color: green;
 }
+
+.success{
+  color: #047857;
+  background-color: #ECFDF5;
+  border: #047857 1px solid;
+}
+
+.warning{
+  color:#FBBF24;
+  background-color: #fffbeb;
+  border:#FBBF24 1px solid;
+}
+
+.danger{
+  color: #f87171;
+  background-color: #fef2f2;
+  border:#f87171 1px solid;
+}
