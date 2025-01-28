@@ -44,20 +44,20 @@ button.button-lg {
   color: green;
 }
 
-.success{
+.button-success{
   color: #047857;
   background-color: #ECFDF5;
-  border: #047857 1px solid;
+  border-color: #047857;
 }
 
-.warning{
+.button-warning{
   color:#FBBF24;
   background-color: #fffbeb;
-  border:#FBBF24 1px solid;
+  border-color:#FBBF24;
 }
 
-.danger{
+.button-danger{
   color: #f87171;
   background-color: #fef2f2;
-  border:#f87171 1px solid;
+  border-color:#f87171;
 }
