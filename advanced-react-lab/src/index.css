@@ -17,6 +17,13 @@ main {
   align-items: center;
 }
 
+.button-container{
+  display: flex;
+  gap: 15px;
+}
+.single-button h2{
+  font-size: 1rem;
+}
 button {
   background-color: #E5E7EB;
   color: #4B5563;
