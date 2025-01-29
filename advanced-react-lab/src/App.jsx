@@ -19,9 +19,9 @@ function App() {
       <div className="avatar-container">
         <Avatar src="./src/assets/bob.jpg" alt="Bob Ziroll" />
         <br />
-        <Avatar>BZ</Avatar>
+        <Avatar className="blue">BZ</Avatar>
         <br />
-        <Avatar />
+        <Avatar className="pink" />
       </div>
     </main>
   );

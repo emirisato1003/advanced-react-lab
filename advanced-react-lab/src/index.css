@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --navy: #1F2937;
+  --pink: #DA6AEC;
+  --red: #F43F5E;
+  --blue: #2F74DC;
+  --green: #22CD90;
+}
+
 body {
   margin: 0;
   padding: 0;

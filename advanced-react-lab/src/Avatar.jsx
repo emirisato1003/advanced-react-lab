@@ -1,21 +1,21 @@
 import { IoPersonSharp } from "react-icons/io5";
-import classNames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
-export default function Avatar(props) {
-
-    return (
-        <>
-            {/* <h2>Avatar component here!</h2> */}
-            {props.src && <div className="avatar">
-                <img src={props.src} alt={props.alt} />
-            </div>}
-            {props.children && <div className="avatar avatar-letters">
-                {props.children}
-            </div>}
-            <div className="avatar avatar-icon">
-                <IoPersonSharp />
-            </div>
-        </>
-    );
+export default function Avatar({ src, alt, children, className }) {
+    const avatarClasses = clsx('avatar', children && 'avatar-letters', !src && className);
+    if (src) {
+        return <div className={avatarClasses}>
+            <img src={src} alt={alt} />
+        </div>;
+    }
+    if (children) {
+        return <div className={avatarClasses}>
+            {children}
+        </div>;
+    } else {
+        return <div className={avatarClasses}>
+            <IoPersonSharp />
+        </div>;
+    }
 }
