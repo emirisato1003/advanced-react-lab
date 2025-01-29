@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Menu from "./Menu/Menu";
+
+/**
+ * Challenge:
+ * 1. Convert the Menu component to use props.children 
+ *    instead of taking an `items` prop. (We'll update 
+ *    the MenuButton and MenuDropdown components later.) 
+ *    See note inside the Menu.js file for more info
+ * 
+ * 2. import MenuButton and MenuDropdown into THIS file
+ *    and render them as children of the Menu component. 
+ *    Remember to pass the buttonText and items array to 
+ *    the components that need those props to function.
+ *    (We'll also be updating that soon!)
+ * 
+ * NOTE: The functionality of the menu will be broken after 
+ * these changes, but that's okay! As such, don't worry 
+ * about moving the state or toggle function from the Menu; 
+ * there's more we need to learn before we can do that.
+ */
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Menu
+        buttonText="Sports"
+        items={["Tennis", "Pickleball", "Racquetball", "Squash"]}
+      />
     </>
-  )
+  );
 }
 
 export default App
