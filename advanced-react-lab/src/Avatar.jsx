@@ -18,4 +18,4 @@ export default function Avatar({ src, alt, children, className }) {
             <IoPersonSharp />
         </div>;
     }
-}
+} 
