@@ -3,6 +3,7 @@ import Button from "./Button";
 import Avatar from './Avatar';
 
 function App() {
+  const src = "./src/assets/bob.jpg";
   return (
     <main>
 
@@ -16,7 +17,7 @@ function App() {
 
       <h1>Avatars</h1>
       <div className="avatar-container">
-        <Avatar src="./images/bob.jpg" alt="Bob Ziroll" />
+        <Avatar src="./src/assets/bob.jpg" alt="Bob Ziroll" />
         <br />
         <Avatar>BZ</Avatar>
         <br />
