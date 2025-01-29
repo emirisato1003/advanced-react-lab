@@ -9,13 +9,17 @@ function App() {
       <h1>Buttons</h1>
       <div className="button-container">
         <Button>Log in with Google</Button>
-        <Button variant="success" size="sm" className="green">Log in with Google</Button>
-        <Button variant="warning" size="lg" className="green">Log in with Google</Button>
-        <Button variant="danger" size="lg" className="green">Log in with Google</Button>
+        <Button variant="success" size="sm">Log in with Google</Button>
+        <Button variant="warning" size="lg">Log in with Google</Button>
+        <Button variant="danger" size="lg">Log in with Google</Button>
       </div>
 
       <h1>Avatars</h1>
       <div className="avatar-container">
+        <Avatar src="./images/bob.jpg" alt="Bob Ziroll" />
+        <br />
+        <Avatar>BZ</Avatar>
+        <br />
         <Avatar />
       </div>
     </main>
