@@ -7,7 +7,7 @@ function App() {
 
   return (
     <Menu>
-      <MenuButton buttonText={"Sports"} />
+      <MenuButton>Sports</MenuButton>
       <MenuDropdown items={["Tennis", "Pickleball", "Racquetball", "Squash"]} />
     </Menu>
   );
