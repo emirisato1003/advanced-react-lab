@@ -8,7 +8,7 @@ function App() {
   return (
     <Menu>
       <MenuButton>Sports</MenuButton>
-      <MenuDropdown items={["Tennis", "Pickleball", "Racquetball", "Squash"]} />
+      <MenuDropdown>{["Tennis", "Pickleball", "Racquetball", "Squash"]}</MenuDropdown>
     </Menu>
   );
 }
