@@ -2,7 +2,7 @@ import React, { createContext } from "react";
 import Header from "./Header";
 import Button from "./Button";
 
-const ThemeContext = createContext()
+const ThemeContext = createContext();
 
 export default function App() {
   return (
