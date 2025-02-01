@@ -1,6 +1,8 @@
-import React from "react";
+import React, { createContext } from "react";
 import MenuButton from "./MenuButton";
 import MenuDropdown from "./MenuDropdown";
+
+const MenuContext = createContext();
 
 export default function Menu({ children }) {
     const [open, setOpen] = React.useState(true);
@@ -9,13 +11,12 @@ export default function Menu({ children }) {
         setOpen(prevOpen => !prevOpen);
     }
     return (
-        <div className="menu">
-            {React.Children.map(children, (child) => {
-                return React.cloneElement(child, {
-                    open,
-                    toggle
-                });
-            })}
-        </div>
+        <MenuContext.Provider open='false'>
+            <div className="menu">
+                {children}
+            </div>
+        </MenuContext.Provider>
     );
 }
+
+export { MenuContext };
