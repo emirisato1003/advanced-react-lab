@@ -11,9 +11,9 @@ export default function Menu({ children }) {
         setOpen(prevOpen => !prevOpen);
     }
     return (
-        <MenuContext.Provider value={false}>
+        <MenuContext.Provider value={{open, toggle}}>
             <div className="menu">
-                {children}
+                {children} 
             </div>
         </MenuContext.Provider>
     );
