@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { ThemeContext } from "./App";
 
 export default function Button() {
-    const value = useContext(ThemeContext);
+    const {theme, toggleTheme} = useContext(ThemeContext);
 
     return (
-        <button className={`${value.theme}-theme`}>
+        <button onClick={toggleTheme} className={`${theme}-theme`}>
             Switch Theme
         </button>
     );
