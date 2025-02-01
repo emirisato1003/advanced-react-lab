@@ -5,7 +5,7 @@ export default function Button() {
     const value = useContext(ThemeContext);
 
     return (
-        <button className={`${value}-theme`}>
+        <button className={`${value.theme}-theme`}>
             Switch Theme
         </button>
     );
