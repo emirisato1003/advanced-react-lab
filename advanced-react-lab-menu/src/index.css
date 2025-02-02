@@ -106,6 +106,7 @@ hr {
   cursor: pointer;
   transition: color .5s ease-in-out;
   user-select: none;
+  color: #fff;
 }
 
 .star.filled {
