@@ -8,6 +8,8 @@ export default function Star() {
     }
 
     return (
-        { starred } ? <BsStarFill className='star filled' onClick={toggle} /> : <BsStar className='star ' onClick={toggle} />
+        starred ?
+            <BsStarFill className="star filled" onClick={toggle} /> :
+            <BsStar className="star " onClick={toggle} />
     );
 }
