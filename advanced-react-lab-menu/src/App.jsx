@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from "./Menu/index";
 import Star from './Star/Star';
+import Toggle from './Star/Toggle';
 // import MenuButton from "./Menu/MenuButton";
 // import MenuDropdown from "./Menu/MenuDropdown";
 // import MenuItem from './Menu/MenuItem';
@@ -10,7 +11,9 @@ function App() {
 
   return (
     <>
-      <Star />
+      <Toggle>
+        <Star />
+      </Toggle>
       <br />
       <hr />
       <br />
@@ -26,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;;

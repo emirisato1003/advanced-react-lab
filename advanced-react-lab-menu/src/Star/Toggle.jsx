@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 
-export default function Toggle() {
-    const [starred, setStarred] = useState(false);
+const ToggleContext = createContext();
+
+export default function Toggle({ children }) {
+    const [on, setOn] = useState(false);
+
     function toggle() {
-        setStarred(prev => !prev);
+        setOn(prevOn => !prevOn);
     }
     return (
-        
-    )
+        <ToggleContext.Provider value={{toggle, on}}>
+            {children}
+        </ToggleContext.Provider>
+    );
 }
+
+export { ToggleContext };
