@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-import { MenuContext } from "./Menu";
+// import { MenuContext } from "./Menu";
+import { ToggleContext } from "../Star/Toggle/Toggle";
 
 export default function MenuDropdown({ children }) {
-    const { open, menuId } = useContext(MenuContext);
+    const { on, menuId } = useContext(ToggleContext);
 
-    return open ? (
+    return on ? (
         <div className="menu-dropdown" id={menuId}>
             {children}
         </div>
