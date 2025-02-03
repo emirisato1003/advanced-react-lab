@@ -2,11 +2,9 @@ import React, { useContext } from 'react';
 import Menu from "./Menu/index";
 import { BsStar, BsStarFill } from "react-icons/bs";
 import Toggle from './Star/Toggle/index';
-import MenuButton from './Menu/MenuButton';
-import MenuDropdown from './Menu/MenuDropdown';
-import MenuItem from './Menu/MenuItem';
+
 function App() {
-  const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"];
+  const sports = ["Home", "About", "blog", "Contact"];
 
   return (
     <>
@@ -26,16 +24,18 @@ function App() {
       <br />
 
       <Toggle>
-        <div className="menu" role="menu">
-          <Menu.Button>
-            Sports
-          </Menu.Button>
-          <Menu.Dropdown>
-            {sports.map(sport => (
-              <Menu.Item key={sport}>{sport}</Menu.Item>
-            ))}
-          </Menu.Dropdown>
-        </div>
+        <Menu>
+          <Toggle.Button>
+            <Menu.Button>Menu</Menu.Button>
+          </Toggle.Button>
+          <Toggle.On>
+            <Menu.Dropdown>
+              {sports.map(sport => (
+                <Menu.Item key={sport}>{sport}</Menu.Item>
+              ))}
+            </Menu.Dropdown>
+          </Toggle.On>
+        </Menu>
       </Toggle>
     </>
   );
