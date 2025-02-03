@@ -1,18 +1,16 @@
 import React from 'react';
 import Menu from "./Menu/index";
 import Star from './Star/Star';
-import Toggle from './Star/Toggle/Toggle';
-// import MenuButton from "./Menu/MenuButton";
-// import MenuDropdown from "./Menu/MenuDropdown";
-// import MenuItem from './Menu/MenuItem';
-
+import Toggle from './Star/Toggle/index';
 function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"];
 
   return (
     <>
       <Toggle>
-        <Star />
+        <Toggle.Button>
+          <Star />
+        </Toggle.Button>
       </Toggle>
       <br />
       <hr />
