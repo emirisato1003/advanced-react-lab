@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Menu from "./Menu/index";
 import Star from './Star/Star';
+import { BsStar, BsStarFill } from "react-icons/bs";
 import Toggle from './Star/Toggle/index';
 function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"];
@@ -9,10 +10,14 @@ function App() {
     <>
       <Toggle>
         <Toggle.Button>
-          <Star />
+          <Toggle.On>
+            <BsStarFill className="star filled" />
+          </Toggle.On>
+
+          <Toggle.Off>
+            <BsStar className="star " />
+          </Toggle.Off>
         </Toggle.Button>
-        <Toggle.On>The toggle is on</Toggle.On>
-        <Toggle.Off>The toggle is off</Toggle.Off>
       </Toggle>
       <br />
       <hr />
