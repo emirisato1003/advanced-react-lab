@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import Menu from "./Menu/index";
-import Star from './Star/Star';
 import { BsStar, BsStarFill } from "react-icons/bs";
 import Toggle from './Star/Toggle/index';
 function App() {
