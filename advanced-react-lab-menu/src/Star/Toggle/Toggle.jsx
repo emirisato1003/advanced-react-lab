@@ -6,7 +6,7 @@ export default function Toggle({ onToggle, children }) {
 
 
     useEffect(() => {
-        onToggle
+        onToggle()
     }, [on]);
 
 

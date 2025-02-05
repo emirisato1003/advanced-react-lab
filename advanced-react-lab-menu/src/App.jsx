@@ -7,18 +7,18 @@ function App() {
 
   return (
     <>
-      <Star />
+      <Star onChange={() => console.log("onChange")} />
       <hr />
       <br />
 
-      <Menu>
+      {/* <Menu>
         <Menu.Button>Menu</Menu.Button>
         <Menu.Dropdown>
           {sports.map(sport => (
             <Menu.Item key={sport}>{sport}</Menu.Item>
           ))}
         </Menu.Dropdown>
-      </Menu>
+      </Menu> */}
     </>
   );
 }
