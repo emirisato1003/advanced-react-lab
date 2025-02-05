@@ -8,7 +8,6 @@ function App() {
   return (
     <>
       <Star />
-      <br />
       <hr />
       <br />
 
