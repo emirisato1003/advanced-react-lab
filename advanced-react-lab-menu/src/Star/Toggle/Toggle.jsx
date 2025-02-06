@@ -1,7 +1,7 @@
 import React, { createContext, useState, useId, useEffect, useRef } from 'react';
 const ToggleContext = createContext();
 
-export default function Toggle({ onToggle, children }) {
+export default function Toggle({ children, onToggle = () => {} }) {
     const [on, setOn] = useState(false);
     const firstRender = useRef(true);
 
