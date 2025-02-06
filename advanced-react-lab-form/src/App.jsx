@@ -1,22 +1,25 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 export default function App() {
-  const [text, setText] = React.useState("")
-  const [list, setList] = React.useState([])
+  const [text, setText] = React.useState("");
+  const [list, setList] = React.useState([]);
+  const inputRef = useRef(null);
 
   function handleChange(e) {
-    setText(e.target.value)
+    setText(e.target.value);
   }
 
   function handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
     if (!text) {
       return;
     }
-    setList(prevList => [...prevList, text])
-    setText("")
+    setList(prevList => [...prevList, text]);
+    setText("");
+    // Focus back to the input element
+    inputRef.current.focus();
   }
-  
+
   return (
     <>
       <h2>React Project Ideas</h2>
@@ -26,6 +29,7 @@ export default function App() {
           onChange={handleChange}
           value={text}
           placeholder="Idea"
+          ref={inputRef}
         />
         <button>Submit</button>
       </form>
@@ -34,5 +38,5 @@ export default function App() {
         {list.map((item, i) => <li key={i}>{item}</li>)}
       </ol>
     </>
-  )
+  );
 }
