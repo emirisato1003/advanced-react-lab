@@ -25,7 +25,9 @@ function App() {
       <hr />
       <br />
       <div>
-        <Decision sayName={function(bool) {console.log(bool);}}/>
+        <Decision sayName={(goingOut) => {
+          console.log(goingOut? "I AM going out": "I'm staying")
+          }}/>
       </div>
     </>
   );
