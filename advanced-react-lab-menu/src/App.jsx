@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Menu from "./Menu/index";
 import Star from './Star';
+import Decision from './Decision';
 
 function App() {
   const sports = ["Home", "About", "blog", "Contact"];
@@ -19,6 +20,11 @@ function App() {
           ))}
         </Menu.Dropdown>
       </Menu >
+
+      <hr />
+      <div>
+        <Decision />
+      </div>
     </>
   );
 }
