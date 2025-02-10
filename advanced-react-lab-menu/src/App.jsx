@@ -25,9 +25,11 @@ function App() {
       <hr />
       <br />
       <div>
-        <Decision sayName={(goingOut) => {
-          console.log(goingOut? "I AM going out": "I'm staying")
-          }}/>
+        <Decision render={(goingOut) => {
+          return (
+            <h1>Am I going out tonight?? {goingOut ? "Yes!" : "Nope..."}</h1>
+          );
+        }} />
       </div>
     </>
   );
