@@ -1,8 +1,8 @@
 import React from "react"
 
-export default function Decision() {
+export default function Decision({ sayName }) {
     const [goingOut, setGoingOut] = React.useState(false)
-    
+    sayName(goingOut)
     function toggleGoingOut() {
         setGoingOut(prev => !prev)
     }

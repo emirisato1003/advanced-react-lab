@@ -11,7 +11,6 @@ function App() {
       <Star onChange={() => { }} />
       <hr />
       <br />
-
       <Menu onOpen={() => console.log("open menu")}>
         <Menu.Button>Menu</Menu.Button>
         <Menu.Dropdown>
@@ -20,10 +19,13 @@ function App() {
           ))}
         </Menu.Dropdown>
       </Menu >
+      <br />
+      <br />
 
       <hr />
+      <br />
       <div>
-        <Decision />
+        <Decision sayName={function(bool) {console.log(bool);}}/>
       </div>
     </>
   );
