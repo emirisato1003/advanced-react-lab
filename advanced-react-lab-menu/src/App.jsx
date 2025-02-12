@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Menu from "./Menu/index";
 import Star from './Star';
 import Decision from './Decision';
+import Toggle from './Star/Toggle';
 
 function App() {
   const sports = ["Home", "About", "blog", "Contact"];
@@ -35,6 +36,17 @@ function App() {
           }}
         </Decision>
       </div>
+
+      <Toggle>
+        <Toggle.Button>
+          <Toggle.On>
+            <div className='box filled'></div>
+          </Toggle.On>
+          <Toggle.Off>
+            <div className="box"></div>
+          </Toggle.Off>
+        </Toggle.Button>
+      </Toggle>
     </>
   );
 }
