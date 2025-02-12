@@ -39,12 +39,13 @@ function App() {
 
       <Toggle>
         <Toggle.Button>
-          <Toggle.On>
-            <div className='box filled'></div>
-          </Toggle.On>
-          <Toggle.Off>
-            <div className="box"></div>
-          </Toggle.Off>
+          <Toggle.Display>{
+            (on) => {
+              return (
+                on ? <div className='box filled'></div> : <div className="box"></div>
+              );
+            }
+          }</Toggle.Display>
         </Toggle.Button>
       </Toggle>
     </>
@@ -52,3 +53,10 @@ function App() {
 }
 
 export default App;;
+
+{/* <Toggle.On>
+      <div className='box filled'></div>
+    </Toggle.On>
+    <Toggle.Off>
+      <div className="box"></div>
+    </Toggle.Off>; */}
