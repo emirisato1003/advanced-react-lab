@@ -1,26 +1,16 @@
 import React, { createContext, useState, useId, useEffect, useRef } from 'react';
+import useEffectOnUpdate from '../../hooks/useEffectOnUpdate';
 const ToggleContext = createContext();
 
-export default function Toggle({ children, onToggle = () => {} }) {
+export default function Toggle({ children, onToggle = () => { } }) {
     const [on, setOn] = useState(false);
-    const firstRender = useRef(true);
-
-
-    useEffect(() => {
-        if (firstRender.current) {
-            firstRender.current = false;
-        } else {
-            onToggle();
-        }
-    }, [on]);
-
 
     function toggle() {
         setOn(prevOn => !prevOn);
     }
 
     const menuId = useId();
-
+    useEffectOnUpdate(onToggle, [on]);
     return (
         <ToggleContext.Provider value={{ toggle, on, menuId }}>
             {children}

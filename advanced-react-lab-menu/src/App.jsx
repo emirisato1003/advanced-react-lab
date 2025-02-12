@@ -37,7 +37,7 @@ function App() {
         </Decision>
       </div>
 
-      <Toggle>
+      <Toggle onToggle={() => { console.log("Toggled"); }}>
         <Toggle.Button>
           <Toggle.Display>{
             (on) => {
