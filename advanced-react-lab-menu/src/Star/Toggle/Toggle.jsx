@@ -10,7 +10,7 @@ export default function Toggle({ children, onToggle = () => { } }) {
     }
 
     const menuId = useId();
-    useEffectOnUpdate(onToggle, [on]);
+    useEffectOnUpdate(onToggle,[on]);
     return (
         <ToggleContext.Provider value={{ toggle, on, menuId }}>
             {children}
