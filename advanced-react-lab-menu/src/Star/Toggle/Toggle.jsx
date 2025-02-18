@@ -3,11 +3,6 @@ import useEffectOnUpdate from '../../hooks/useEffectOnUpdate';
 const ToggleContext = createContext();
 
 export default function Toggle({ children, onToggle = () => { } }) {
-    const [on, setOn] = useState(false);
-
-    function toggle() {
-        setOn(prevOn => !prevOn);
-    }
 
     const menuId = useId();
     useEffectOnUpdate(onToggle,[on]);
