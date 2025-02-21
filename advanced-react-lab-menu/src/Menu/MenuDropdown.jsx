@@ -1,13 +1,13 @@
 import React from "react";
 import Toggle from "../Star/Toggle";
+import useToggle from "../hooks/useToggle";
 
 export default function MenuDropdown({ children }) {
-
+    const [open, toggleOpen] = useToggle();
+    console.log(open);
     return (
-        <Toggle.On>
-            <div className="menu-dropdown">
-                {children}
-            </div>
-        </Toggle.On>
+        open && <div className="menu-dropdown">
+            {children}
+        </div>
     );
 }

@@ -5,7 +5,6 @@ import useToggle from './hooks/useToggle';
 
 export default function Star({ onChange }) {
     const [on, toggle] = useToggle();
-    console.log(toggle);
     return (
 
         <div onClick={toggle}>

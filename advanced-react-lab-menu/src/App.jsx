@@ -10,8 +10,8 @@ function App() {
   return (
     <>
     <Star />
-      {/* <Star onChange={() => { }} /> */}
-      {/* <hr />
+      {/* <Star onChange={() => { }} />  */}
+      <hr />
       <br />
       <Menu onOpen={() => console.log("open menu")}>
         <Menu.Button>Menu</Menu.Button>
@@ -21,7 +21,7 @@ function App() {
           ))}
         </Menu.Dropdown>
       </Menu >
-      <br />
+      {/* <br />
       <br />
 
       <hr />
