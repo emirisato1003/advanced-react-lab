@@ -9,8 +9,9 @@ function App() {
 
   return (
     <>
-      <Star onChange={() => { }} />
-      <hr />
+    <Star />
+      {/* <Star onChange={() => { }} /> */}
+      {/* <hr />
       <br />
       <Menu onOpen={() => console.log("open menu")}>
         <Menu.Button>Menu</Menu.Button>
@@ -47,7 +48,7 @@ function App() {
             }
           }</Toggle.Display>
         </Toggle.Button>
-      </Toggle>
+      </Toggle> */}
     </>
   );
 }
