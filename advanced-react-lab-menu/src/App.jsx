@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-    <Star />
+    {/* <Star /> */}
       {/* <Star onChange={() => { }} />  */}
       <hr />
       <br />
