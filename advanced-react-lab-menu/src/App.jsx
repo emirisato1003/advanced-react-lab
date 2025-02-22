@@ -13,7 +13,7 @@ function App() {
       {/* <Star onChange={() => { }} />  */}
       <hr />
       <br />
-      <Menu onOpen={() => console.log("open menu")}>
+      <Menu onOpen={() => console.log("open/close menu")}>
         <Menu.Button>Menu</Menu.Button>
         <Menu.Dropdown>
           {sports.map(sport => (
