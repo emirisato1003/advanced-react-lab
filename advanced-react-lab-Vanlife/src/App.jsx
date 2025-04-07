@@ -6,20 +6,33 @@ import Home from './assets/components/Home';
 import About from './assets/components/About';
 import './App.css';
 
+
+import { FaRegCopyright } from "react-icons/fa";
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <BrowserRouter >
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <nav>
+          <div className="nav-logo">
+            <Link to='/'>#VANLIFE</Link>
+          </div>
+          <div className="nav-link">
+            <Link to='/about'>About</Link>
+            <Link to='/vans'>Vans</Link>
+          </div>
+        </nav>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </BrowserRouter>
+      <footer>
+        <FaRegCopyright className='footer-icon'/>&nbsp;
+        2025 #VANLIFE
+      </footer>
+    </>
   );
 }
 
