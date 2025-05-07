@@ -1,13 +1,11 @@
-import React, { lazy, Suspense } from "react";
-import ReactDOM from "react-dom/client";
-// import ProductsList from "./ProductsList";
+import React, { useMemo } from 'react';
+import ReactDOM from 'react-dom/client';
+import Product from "./Product";
+import productsData from "./data";
 
-const ProductsList = lazy(() => {
-  return import("./ProductsList");
-});
 function App() {
   const [count, setCount] = React.useState(0);
-  const [showProducts, setShowProducts] = React.useState(false);
+  const [sort, setSort] = React.useState(false);
 
   function increment() {
     setCount(prevCount => prevCount + 1);
@@ -17,36 +15,50 @@ function App() {
     setCount(prevCount => prevCount - 1);
   }
 
+  // const startTime1 = Date.now();
+  // const sortedProducts = [...productsData].sort(
+  //   (a, b) => a.name.localeCompare(b.name)
+  // );
+  // const endTime1 = Date.now();
+  // console.log(`Took ${endTime1 - startTime1}ms`);
+
+  const startTime2 = Date.now();
+
+  const sortedProducts = useMemo(() => {
+    return [...productsData].sort(
+      (a, b) => a.name.localeCompare(b.name)
+    );
+  }, [productsData]);
+
+  const endTime2 = Date.now();
+  console.log(`Took ${endTime2 - startTime2}ms`);
+
+  const visibleProducts = sort ? sortedProducts : productsData;
+
   return (
     <>
       <h1>The current count is {count}</h1>
-      <button className="button" onClick={decrement}>
-        -
-      </button>
-      <button className="button" onClick={increment}>
-        +
-      </button>
+      <button className="button" onClick={decrement}>-</button>
+      <button className="button" onClick={increment}>+</button>
       <br />
       <br />
       <button
         className="button"
-        onClick={() => setShowProducts(prev => !prev)}
+        onClick={() => setSort(prev => !prev)}
       >
-        Show Products
+        {sort ? "Unsort" : "Sort"}
       </button>
       <br />
       <br />
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <div className="products-list">
-          {showProducts && <ProductsList />}
-        </div>
-      </Suspense>
+      <div className="products-list">
+        {
+          visibleProducts.map(product => (
+            <Product key={product.id} product={product} />
+          ))
+        }
+      </div>
     </>
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
