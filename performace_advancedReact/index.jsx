@@ -1,17 +1,20 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
-import ProductsList from "./ProductsList"
+import React, { lazy, Suspense } from "react";
+import ReactDOM from "react-dom/client";
+// import ProductsList from "./ProductsList";
 
+const ProductsList = lazy(() => {
+  return import("./ProductsList");
+});
 function App() {
-  const [count, setCount] = React.useState(0)
-  const [showProducts, setShowProducts] = React.useState(false)
+  const [count, setCount] = React.useState(0);
+  const [showProducts, setShowProducts] = React.useState(false);
 
   function increment() {
-    setCount(prevCount => prevCount + 1)
+    setCount(prevCount => prevCount + 1);
   }
 
   function decrement() {
-    setCount(prevCount => prevCount - 1)
+    setCount(prevCount => prevCount - 1);
   }
 
   return (
@@ -19,10 +22,10 @@ function App() {
       <h1>The current count is {count}</h1>
       <button className="button" onClick={decrement}>
         -
-            </button>
+      </button>
       <button className="button" onClick={increment}>
         +
-            </button>
+      </button>
       <br />
       <br />
       <button
@@ -30,18 +33,20 @@ function App() {
         onClick={() => setShowProducts(prev => !prev)}
       >
         Show Products
-            </button>
+      </button>
       <br />
       <br />
-      <div className="products-list">
-        {showProducts && <ProductsList />}
-      </div>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <div className="products-list">
+          {showProducts && <ProductsList />}
+        </div>
+      </Suspense>
     </>
-  )
+  );
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-)
+);
