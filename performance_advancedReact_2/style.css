@@ -30,7 +30,7 @@ button {
 }
 
 .grandparent::before {
-    content: "‍👴🏼";
+    content: "👴";
     position: absolute;
     left: -30px;
 }
@@ -41,7 +41,7 @@ button {
 }
 
 .parent::before {
-    content: "️️️👩🏽";
+    content: "️️️👨‍🦰";
     position: absolute;
     left: -30px;
 }
@@ -52,7 +52,7 @@ button {
 }
 
 .child::before {
-    content: "‍👦🏽";
+    content: "🧒";
     position: absolute;
     left: -30px;
 }
@@ -63,7 +63,7 @@ button {
 }
 
 .grandchild::before {
-    content: "‍👶🏽";
+    content: "👶";
     position: absolute;
     left: -30px;
 }

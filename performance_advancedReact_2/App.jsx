@@ -8,7 +8,7 @@ export default function App() {
     function increment() {
         setCount(prevCount => prevCount + 1)
     }
-
+    console.log(increment);
     function decrement() {
         setCount(prevCount => prevCount - 1)
     }
@@ -31,7 +31,7 @@ export default function App() {
                 {darkMode ? "Switch to Light" : "Switch to Dark"}
             </button>
             <p>App component</p>
-            <GrandParent style={style} />
+            <GrandParent style={style} increment={increment}/>
             <GrandParent />
         </div>
     )

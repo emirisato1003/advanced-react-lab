@@ -4,7 +4,7 @@ import { sleep } from "./utils"
 
 export default function Child() {
     sleep(30)
-    console.log("[ ]   [ ]   [🧒🏻]   [ ] rendered")
+    console.log("[ ]   [ ]   [👦]   [ ] rendered")
     return (
         <div className="child">
             <p>Child Component</p>
