@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 const swCharacters = [
     { name: "Luke Skywalker", type: "Jedi" },
     { name: "Darth Vader", type: "Sith" },
@@ -23,6 +23,9 @@ export default function HomePage() {
     return (
         <main>
             <h2>Home</h2>
+            <Link to="?type=jedi">Jedi</Link>
+            <Link to="?type=sith">Sith</Link>
+            <Link to=".">Clear</Link>
             {charEls}
         </main>
     );
