@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSearchParams } from 'react-router-dom';
 const swCharacters = [
     { name: "Luke Skywalker", type: "Jedi" },
     { name: "Darth Vader", type: "Sith" },
@@ -6,6 +7,8 @@ const swCharacters = [
     { name: "Yoda", type: "Jedi" }
 ];
 export default function HomePage() {
+    const [searchParams, setSearchParams] = useSearchParams()
+    console.log(searchParams.get("type"))
     const charEls = swCharacters.map(({ name, type }) => (
         <div key={name}>
             <h3>Name: {name}</h3>
