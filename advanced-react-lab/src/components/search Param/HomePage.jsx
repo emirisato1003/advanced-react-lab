@@ -8,8 +8,13 @@ const swCharacters = [
 ];
 export default function HomePage() {
     const [searchParams, setSearchParams] = useSearchParams()
-    console.log(searchParams.get("type"))
-    const charEls = swCharacters.map(({ name, type }) => (
+    const typeFilter = searchParams.get("type")
+
+    const filteredChar = typeFilter 
+    ? swCharacters.filter(({type}) => type.toLowerCase() === typeFilter) 
+    : swCharacters
+
+    const charEls = filteredChar.map(({ name, type }) => (
         <div key={name}>
             <h3>Name: {name}</h3>
             <p>Type: {type}</p>
