@@ -1,29 +1,18 @@
-import React from 'react';
-import Button from "./Button";
-import Avatar from './Avatar';
+import React, { Profiler } from 'react';
+import Button from "./components/lab-1/Button";
+import Avatar from './components/lab-1/Avatar';
+import Profile from './components/lab-1/profile';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './components/search Param/HomePage';
 
 function App() {
-  const src = "./src/assets/bob.jpg";
   return (
-    <main>
-
-      <h1>Buttons</h1>
-      <div className="button-container">
-        <Button>Log in with Google</Button>
-        <Button variant="success" size="sm">Log in with Google</Button>
-        <Button variant="warning" size="lg">Log in with Google</Button>
-        <Button variant="danger" size="lg">Log in with Google</Button>
-      </div>
-
-      <h1>Avatars</h1>
-      <div className="avatar-container">
-        <Avatar src="./src/assets/bob.jpg" alt="Bob Ziroll" />
-        <br />
-        <Avatar className="blue">BZ</Avatar>
-        <br />
-        <Avatar className="pink" />
-      </div>
-    </main>
+    // <Profile />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/characters' element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
