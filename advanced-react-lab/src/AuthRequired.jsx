@@ -1,14 +1,11 @@
 import React from 'react';
+import { Navigate, Outlet } from 'react-router-dom';
 
 export default function AuthRequired() {
-    // check the authenticated status of the user
-    // if they're NOT authenticated
-        // send the user to the login page
-        // if they ARE authenticated
-            // Render the Outlet
-    return (
-        <div>
+    const authenticated = true;
+    if (!authenticated) {
+        return <Navigate to='/login' />;
+    }
 
-        </div>
-    );
+    return <Outlet />;
 }
